@@ -3,6 +3,7 @@
 * ======================== -->
 
 <!--? By ID, Class, and Tag: 
+
 getElementById(id) 
 getElementsByClassName(className)
 getElementsByTagName(tagName) 
@@ -46,43 +47,102 @@ querySelectorAll(selector) -->
       <div class="value"></div>
     </div>
     <script>
-      let findElementById = document.getElementById("heading");
-      // let findElementById = document.getElementById("#heading"); ❌
-      const findElementByClassName =
-        document.getElementsByClassName("list-of--nodes");
+      
+    // let getById= document.getElementById('#heading');
 
-      // console.log(...findElementByClassName);
 
-      // for (let elem of findElementByClassName) {
-      //   console.log(elem.innerHTML);
-      //   console.log(elem.innerText);
-      //   console.log(elem.textContent);
-      // }
+    //---------Class ki class--------------//
 
-      // console.log(findElementById.innerHTML);
-      // console.log(findElementById.innerText);
-      // console.log(findElementById.textContent);
+    let getByClass= document.getElementsByClassName('list-of--nodes') 
 
-      // The `innerHTML` property returns the complete content, including all HTML tags, inside the `ul` elements and their text content.
+    //it gives us htmlCollection milega jo ki iterable hei aur iterate kargege data get karne ke liye
+    
+    // console.log(...getByClass)//ye html collecton ke form mei dega jo ki humare kaam ka nahi hai aur samajh mei bhi nahi aega
+    
+    // console.log(...getByClass);  //... jo hei jesa html document mei likha hei wesa ja wesa dene mei madad karta hei
 
-      // Example using `innerText`: Prints text as it appears on screen, considering styling and excluding hidden text.
+    //ye niche wala for loop  humei getByclass naame ke elements aur unke andar ka text dikha dega
 
-      // Example using `textContent`: Prints text as it is in the markup, including hidden text and without considering styling.
+    // for(let elem of getByClass)
+    // {
+    //   console.log(elem);//ye getByClass ke sath jitne bhi element hei unko print karega superficially
+    
+    // }
 
-      // const getElementsByTagName = document.getElementsByTagName("li");
-      // // console.log(getElementsByTagName);
-      // // console.log(...getElementsByTagName);
-      // for (let name of getElementsByTagName) {
-      //   console.log(name);
-      // }
-      // const findElementByQuerySelector = document.querySelector("#heading");
-      // console.log(
-      //   (findElementByQuerySelector.innerText = "World Best JS Course")
-      // );
+    // niche wala forloop humei jo element hei getByclass ke andar sirf unke andar ka text content dege humei
 
-      const findElementByQuerySelectorAll = document.querySelectorAll("li");
-      console.log(findElementByQuerySelectorAll);
-      findElementByQuerySelectorAll.forEach((curElem) => console.log(curElem));
+    //for getting text content also
+
+    // for(let elem of getByClass)
+    // {
+    //   // console.log(elem.innerHTML);//ye element ke sath text chhapega matla class ke andar jo jo element hei bo
+    //   // console.log(elem.textContent)// (ye comment ko bhi access karlega ye focus karta hei document mei kya kya likha hei) ye sirf element ke andar ka text chhapega aur ye element ke andar ka sirf text content dega
+    //   // console.log(elem.innerText);//  (ye css bhi consider karta hei)ye bhi text dega lekin sirf bo jo ki browser window pe dikh raha hoga
+    // }
+
+    //output of the for loop will be same as spread operator
+
+    //... htmlCollection ko spred kardega aur class wale element ko simple html ke form mei dikha dega humei jesa humne html document mei likh rakha
+
+    //textContetnt mei css apply nahi hota hei
+
+
+
+
+    // ----------------------Select or get element by tag name-------------------------------//
+
+    // const bytag= document.getElementsByTagName("li");
+    // console.log(bytag);//html collection aega li ka
+    // console.log(...bytag);//html document mei jese likha hei li ajaege wese ke wese
+
+    //in deta hei index elements ka
+    //for deta hei direct elements
+    // for(let li of bytag)
+    // {
+    //   // console.log(li);//... same
+    //   // console.log(li.innerHTML)//text hi text ajaega
+    //   // console.log(li.textContent)//same as above
+    //   // console.log(li.innerText)//same as abovwe
+    // }
+
+
+
+
+    // -====================queryselection======================//
+
+    //simple queryselector deta hei htmlCollection
+    // const queryselec1= document.querySelector("#heading")
+    // const queryselec2= document.querySelector(".list-of--nodes")
+    // console.log(queryselec1.innerHTML="yuvi is best")
+    // console.log(queryselec2.innerHTML="<li>hello yuvi</li>")//chamging innner html using javascript
+
+
+    //query selector all deta hei nodelist
+    const queryselectall= document.querySelectorAll('li');
+  // queryselectall.forEach((curElem)=>console.log(curElem));//same
+  // html document type like what we have seen previously 
+  //   for (let i of queryselectall)
+  //   {
+  //     console.log(i);//same
+  //   }
+  //  // console.log(queryselectall);    //different output
+  // console.log(...queryselectall);  //ispe bhi css apply nahi hogi  (same)
+
+
+
+
+    // innerHTML dega selected element ke andar ka text content
+    //Alternatives of innerHTML
+    //1.innerText
+    //2.textContent
+
+    
+// =====================Difference======================//
+   //lekin hum dono pe for of loop use kar ssakte hei 
+    // here node list on the spot udate nahi hota
+    //htmlcollection onnthe spot update hojata hei 
+
+// ==================SEearch operation done=============//
     </script>
   </body>
 </html>

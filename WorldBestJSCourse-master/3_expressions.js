@@ -7,7 +7,7 @@
 //* Types of Operators in JS
 // Assignment operators
 // Arithmetic operators
-i// In arithmetic we increment and decrement operator.
+// In arithmetic we increment and decrement operator.
 // Comparison operators
 // Logical operators
 // String operators
@@ -38,11 +38,11 @@ i// In arithmetic we increment and decrement operator.
 // console.log(sum);
 
 //? Subtraction (-): Subtracts the right operand from the left operand.
-// Example:
-// var a = 10;
-// var b = 7;
-// var difference = a - b;
-// console.log(difference);
+Example:
+var a = 10;
+var b = 7;
+var difference = a - b;
+console.log(difference);
 
 //? Multiplication (*): Multiplies two values or variables.
 // Example:

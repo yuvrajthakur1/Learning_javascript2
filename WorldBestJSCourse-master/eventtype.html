@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(223, 173, 173);
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- inline event handler  -->
+    <h1>INLINE EVENT LISTNER</h1>
+    <button id="myBtn" onclick="alert('welcome to workd of javascriptS')">greeting</button>
+    <button id="myBtn" ondblclick="confirm('are you enthusiat of javascript')">greeting again</button>
+
+    <!-- dom event handler  -->
+    <h1>dom event handler</h1>
+    <button id="myBtn6">greeting</button>
+    <button id="myBtn">greeting again</button>
+
+    <!-- Add event listner event handler -->
+    <h1> Add event listner event handler</h1>
+    <button id="myBtn2">greeting</button>
+    <button  id="myBtn3">greeting again</button>
+
+    <script>
+
+      // using document  event handler handler
+      
+    //   document.getElementById("myBtn6").onclick=
+    // ()=> alert('dom event listener');
+      
+    document.getElementById("myBtn6").onmouseover=
+    ()=> alert('dom event listener');
+    
+    
+    // using addevent listner
+
+      let getadd= document.getElementById('myBtn2');
+      getadd.addEventListener('click',()=>
+    {
+      alert('add event listner here')
+    })
+      let getadd3= document.getElementById('myBtn3');
+      getadd3.addEventListener('click',()=>
+    {
+      alert('add event listner here')
+    })
+    </script>
+    
+  </body>
+</html>

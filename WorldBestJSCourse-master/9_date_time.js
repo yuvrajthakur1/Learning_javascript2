@@ -60,15 +60,28 @@
 
 //? 9: new Date(milliseconds): Creates a Date object representing the number of milliseconds since the Unix epoch (January 1, 1970, 00:00:00 UTC).
 // const curMilliSeconds = new Date().getTime();
-// // const milliseconds = 1632090690883; // Example milliseconds
-// const dateFromMilliseconds = new Date(curMilliSeconds);
-// console.log(dateFromMilliseconds);
+// // // const milliseconds = 1632090690883; // Example milliseconds
+// // const dateFromMilliseconds = new Date(curMilliSeconds);
+// // console.log(dateFromMilliseconds);
+
+// console.log(curMilliSeconds)
+
+// const curMilliSeconds = new Date().getTime();
+// it will give milisecond from  (January 1, 1970, 00:00:00 UTC)
+
+// const hellotime= new Date().getTime();
+
+// console.log(hellotime)
+
+
 
 //todo Note:
 //? 1: JavaScript counts months from 0 to 11:
 // ?January = 0, December = 11
 
 //? 2: JavaScript Stores Dates as Milliseconds: JavaScript stores dates as number of milliseconds since January 01, 1970.
+
+
 
 //* Date String Format: If the dateString is in a recognizable format, the Date object will be created accordingly.
 //? new Date(date string) creates a date object from a date string
@@ -77,21 +90,31 @@
 // console.log(date1);
 // console.log(date2);
 
+
+
 //* ==================================================
 //* JavaScript Get Date Methods / Getting Components:
 //* ===================================================
 
 // You can get various components of a date using the methods of the Date object:
+
 // const currentDate = new Date();
+
 // //? In a date object, the time is static.
+
 // const year = currentDate.getFullYear();
 // const month = currentDate.getMonth(); // 0-based index
 // const date = currentDate.getDate();
 // const day = currentDate.getDay();
 // console.log(currentDate);
 // console.log(day);
+
 // In JavaScript, the first day of the week (day 0) is Sunday.
+
 // day of the week (0 for Sunday, 1 for Monday, ..., 6 for Saturday)
+
+
+
 
 //* ==================================================
 //* JavaScript Set Date Methods / Setting Components:
@@ -113,6 +136,10 @@
 // date.setDate(15);
 // console.log(date); // Date object with the day of the month set to 15
 
+
+
+
+
 //* ==================================================
 //* JavaScript Get Time Methods / Getting Components:
 //* ===================================================
@@ -123,6 +150,9 @@
 // const seconds = currentTime.getSeconds();
 // const time = currentTime.getTime();
 // console.log(time);
+
+
+
 
 //* ==================================================
 //* JavaScript Set Time Methods / Getting Components:
@@ -149,33 +179,46 @@
 // console.log(date); // Date object with the milliseconds set to 500
 
 //? setTime(timeValue): Sets the Date object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC.
+
 // const date = new Date();
-// date.setTime(1832090690883);
+// date.setTime(1832090);
 // console.log(date); // Date object representing the specified time
+
+
+ 
 
 //* ================================================================
 //* A few useful methods of the Date object in JavaScript
 //* ================================================================
+
+
 
 //? 1: toLocaleString(): Returns a string representing the date and time portion of a Date object using the current locale's conventions.
 // const date = new Date();
 // const localString = date.toLocaleString();
 // console.log(localString); // Example output: "2/19/2024, 4:30:00 PM" (depending on the locale)
 
+
 //? 2: toLocaleDateString(): Returns a string representing the date portion of a Date object using the current locale's conventions.
 // const date = new Date();
 // const localDateString = date.toLocaleDateString();
 // console.log(localDateString); // Example output: "2/19/2024" (depending on the locale)
+
 
 //? 3: toLocaleTimeString(): Returns a string representing the time portion of a Date object using the current locale's conventions.
 // const date = new Date();
 // const localTimeString = date.toLocaleTimeString();
 // console.log(localTimeString); // Example output: "4:30:00 PM" (depending on the locale)
 
-//? 5: parse(): Parses a string representation of a date and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
+//? 4: parse(): Parses a string representation of a date and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
 // const dateString = "2024-02-19T16:30:00Z";
 // const parsedDate = Date.parse(dateString);
 // console.log(parsedDate); // Example output: 1703254200000 (milliseconds)
+
+
+
+
+
 
 //* ==================
 //* //* Bonus
@@ -196,21 +239,25 @@
 
 //! 1: Write a function to add a specified number of days to a given date.
 
-// const addDaysToDate = (date, extraDay) => {
-//   //   console.log(date);
-//   //   console.log(date.setDate(date.getDate() + extraDay));
-//   //   console.log(new Date(1709769600000));
-//   let updatedDate = date.setDate(date.getDate() + extraDay);
-//   return new Date(updatedDate);
-// };
+// const addDaysToDate= (date,extraDays)=>
+// {
 
-// // Example usage:
-// const date = new Date("2024-02-29");
+//     let updatedDate = date.setDate(date.getDate() + extraDays)
+
+//     return new Date(updatedDate);
+
+// }
+
+// // // Example usage:
+// const date = new Date("2024-02-10");
 // const newDate = addDaysToDate(date, 7);
 // console.log(newDate);
 // console.log(newDate.toLocaleDateString());
 
-//! Question: Write a function to calculate the difference in days between two given dates.
+
+
+
+//! 2. Question: Write a function to calculate the difference in days between two given dates.
 
 // const getDaysDifference = (d1, d2) => {
 //   let oneDay = 24 * 60 * 60 * 1000;

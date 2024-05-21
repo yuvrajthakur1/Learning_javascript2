@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random gradient generator</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button
+        {
+            border: 2px solid black;
+            border-radius: 2px;
+            padding: 20px;
+            background-color: aqua;
+            content: icon;
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+        <div>
+            <button class="myBtn1">#75ab8a</button>
+            <button class="myBtn2">#75ab8a</button>
+        </div>
+        <section>
+            <h1>Copy your code here</h1>
+
+            <div class="copy-code">
+                background-image: linear-gradient(to right, rgb(92,145,229),rgb(152,63,198))
+            </div>
+        </section> 
+
+        <script>
+            let btn1= document.querySelector(".myBtn1");
+            let btn2= document.querySelector(".myBtn2");
+            let copyDiv= document.querySelector(".copy-code");
+            console.log(copyDiv);
+            let rgb1="#356466";
+            let rgb2="#354367"
+           
+
+            // resuable code
+            const hexValue=()=>
+            {
+                let hexaCode= "0123456789abcdef";
+            let color="#";
+
+           for(let i=0;i<6;i++)
+           {
+            // console.log(hexaCode[Math.floor(Math.random()*16)]);
+
+            color= color+hexaCode[Math.floor(Math.random()*16)];
+           }
+           return (color);
+            }
+
+
+
+          const handleBtn1= ()=>
+          {
+            rgb1=hexValue();
+        //    let lagadege to bo seemit hojaeg isliye hata diya hei
+           console.log(rgb1);
+           document.body.style.backgroundImage=`linear-gradient(to right, ${rgb1},${rgb2})`;
+           copyDiv.textContent= `background-image: linear-gradient(to right, ${rgb1},${rgb2})`;
+           btn1.textContent=`${rgb1}`
+        //   rendering of text
+
+        //    tempelate literal use karrhe hei realtime code of color ko lene ke liye
+          }
+
+          const handleBtn2= ()=>
+          {
+           rgb2=hexValue();
+           console.log(rgb2);
+           document.body.style.backgroundImage=`linear-gradient(to right, ${rgb1},${rgb2})`;
+           copyDiv.textContent= `background-image: linear-gradient(to right, ${rgb1},${rgb2})`;
+           btn2.textContent=`${rgb2}`
+          }
+          
+
+          btn1.addEventListener('click',handleBtn1);
+          btn2.addEventListener('click',handleBtn2);
+
+          copyDiv.addEventListener('click',()=>{
+          navigator.clipboard.writeText(copyDiv.innerHTML);
+            // text copy karne ke liye function
+
+          });
+        </script>
+</body>
+</html>

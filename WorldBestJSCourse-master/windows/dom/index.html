@@ -1,14 +1,4 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title>Javascript</title>
-  </head>
-  <body>
-    <h1>Best JS Course</h1>
-    <p>DOM Tree Structure</p>
-  </body>
-</html>
- -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,10 +23,20 @@
       let htmlHead = document.head;
 
       // let bodyChild = htmlBody.childNodes;
-      let bodyChild = htmlBody.children;
+      //todo ye text bhi space bhi include karega aur ye Nodelist return karta hei.
+
+      let bodyChild = htmlBody.children; 
+      //ye sirf elements ko hi include karega and ye htmlcollection return karta hei.
 
       let firstChild = htmlBody.firstElementChild;
+      //ye html collection ke hisab se chalta hei
+
+
       // let firstChild = htmlBody.firstChild;
+
+     //ye nodelist (htmlBody.childNodes); pe kaam krta hei
+
+      /*jab bhi humei htmlCollection se data chahiye hota h (it means spaces tabs and normal text exclude hojaege)*/
 
       // let lastChild = htmlBody.lastChild;
 
@@ -46,7 +46,12 @@
 
       let parentNode = previousSibling.parentElement;
 
+      let body=document.body;
+
+      // let html=document.firstElementChild;
+
       console.log(parentNode);
+      
     </script>
   </body>
 </html>

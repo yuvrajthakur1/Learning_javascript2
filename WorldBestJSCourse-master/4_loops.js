@@ -68,43 +68,43 @@
 //* Interview Questions
 //* ===============================
 //! 1: Write a program to check if a number is even or odd.
-var num = "7";
-if (num % 2 === 0) {
-  console.log("Num is even");
-} else {
-  console.log("Num is odd");
-}
+// var num = "7";
+// if (num % 2 === 0) {
+//   console.log("Num is even");
+// } else {
+//   console.log("Num is odd");
+// }
 
 //! 2: Write a program to check if a number is prime.
 //todo Prime numbers are numbers that have only 2 factors: 1 and themselves.
 //? All prime numbers greater than 2 are odd.
 //? However, not all odd numbers are prime.
 
-var num = 13;
-var isPrime = true;
+// var num = 13;
+// var isPrime = true;
 
-for (var i = 2; i < num; i++) {
-  if (num % i === 0) {
-    isPrime = false;
-    break;
-  }
-}
+// for (var i = 2; i < num; i++) {
+//   if (num % i === 0) {
+//     isPrime = false;
+//     break;
+//   }
+// }
 
-if (isPrime) {
-  console.log("Num is prime");
-} else {
-  console.log("Num is not prime");
-}
+// if (isPrime) {
+//   console.log("Num is prime");
+// } else {
+//   console.log("Num is not prime");
+// }
 
 //! 3: Write a program to check if a number is positive, negative, or zero.
-var num = -10;
-if (num === 0) {
-  console.log("NUm is zero");
-} else if (num > 0) {
-  console.log("NUm is positive ");
-} else {
-  console.log("NUm is negative ");
-}
+// var num = -10;
+// if (num === 0) {
+//   console.log("NUm is zero");
+// } else if (num > 0) {
+//   console.log("NUm is positive ");
+// } else {
+//   console.log("NUm is negative ");
+// }
 
 //* ===============================
 //* Switch Statement
@@ -138,7 +138,7 @@ if (num === 0) {
 //     break;
 
 //   case "Friday":
-//     console.log("omg lets have party today");
+//     console.log("Today is friday ");
 //     break;
 
 //   case "Sunday":
@@ -153,33 +153,28 @@ if (num === 0) {
 // ? Challenge time
 //? ==========================
 
-//! Write a JavaScript switch statement that takes a variable areaOfShapes representing different shapes, and based on its value, calculates and logs the area of the corresponding shape. Consider three shapes: 'Rectangle,' 'Circle,' and 'Square.' For 'Rectangle,' use variables a and b as the sides; for 'Circle,' use a variable r as the radius; and for 'Square,' use variable a as the side length. If the provided shape is not recognized, log a message saying, 'Sorry the shape is not available.' Test your switch statement with areaOfShapes set to 'Square' and sides a and b set to 5 and 10, respectively. Ensure that the correct area (25 in this case) is logged to the console.
+//* Write a JavaScript switch statement that takes a variable areaOfShapes representing different shapes, and based on its value, calculates and logs the area of the corresponding shape. Consider three shapes: 'Rectangle,' 'Circle,' and 'Square.' For 'Rectangle,' use variables a and b as the sides; for 'Circle,' use a variable r as the radius; and for 'Square,' use variable a as the side length. If the provided shape is not recognized, log a message saying, 'Sorry the shape is not available.' Test your switch statement with areaOfShapes set to 'Square' and sides a and b set to 5 and 10, respectively. Ensure that the correct area (25 in this case) is logged to the console.
 
-// var areaOfShapes = "square";
-// var a = 5;
-// var b = 10;
-// var result;
-// switch (areaOfShapes) {
+// var areaOfShapes="rectangsgSgle";
+// var a=10;
+// var b=20;
+
+
+// switch(areaOfShapes)
+// {
 //   case "square":
-//     result = a * a;
-//     console.log(result);
+//     console.log(a*a);
 //     break;
-
 //   case "rectangle":
-//     result = a * b;
-//     console.log(result);
+//     console.log(a*b);
 //     break;
-
 //   case "circle":
-//     var r = 2;
-//     result = 3.142 * (r * r);
-//     console.log(result);
+//     let r=3.14;
+//     console.log(r*(a*a));
 //     break;
-
 //   default:
-//     console.log("No shape matches");
+//     console.log("No match");
 // }
-
 //! Question: Explain the purpose of the code. What is it calculating based on the values of areaOfShapes, a, and b?
 //? The code calculates and logs the area of different shapes (rectangle, circle, square) based on the value of the areaOfShapes variable.
 
@@ -209,25 +204,27 @@ if (num === 0) {
 // }
 
 //* Simple while loop to count from 1 to 10 🧑‍💻
-// var num = 1;
-// while (num <= 10) {
-//   console.log(num);
-//   num++;
+// var count=0;
+// let i=1;
+// while(i<=10)
+// {
+//  if(i%2==0)
+//  {
+//   count=count+i;
+//  }
+//   i++;
 // }
-
+// console.log(count);
 //! practice 🧑‍💻
-//? let's create a table of 5
-// 5*1 = 5
-// 5*2 = 10
-// 5*2 = 10
-
-// var num = 1;
-// while (num <= 10) {
-//   console.log("5 * " + num + " = " + 5 * num);
-//   //   console.log(`5 * ${num} = ${5 * num}`);
-//   num++;
+// //? let's create a table of 5
+// var i=1;
+// result=0;
+// while(i<=10)
+// {
+//   result=5*i;
+//   console.log(result);
+//   i++;
 // }
-
 //* ===============================
 //* Do-While Loop
 //* ===============================
@@ -246,11 +243,11 @@ if (num === 0) {
 //   num++;
 // }
 
-// var num = 1;
+// var i=1;
 // do{
-//     console.log(num);
-//     num++;
-// }while (num <= 10)
+//    console.log(i);
+//    i++;
+// }while(i<=10);
 
 //? Common Use Cases:
 //? When you want to guarantee the execution of the loop body at least once.
@@ -262,7 +259,7 @@ if (num === 0) {
 // let positiveNumber;
 // do {
 //   userInput = prompt("enter any positive number");
-//   positiveNumber = parseFloat(userInput);
+//   positiveNumber = parseInt(userInput);
 // } while (isNaN(positiveNumber) || positiveNumber < 0);
 // console.log("You entered a valid positive number:", positiveNumber);
 
@@ -281,22 +278,18 @@ if (num === 0) {
 
 //* Simple for loop to count from 1 to 10
 
-// var num = 1;
-// do {
-//   console.log(num);
-//   num++;
-// } while (num <= 10);
-
-// for (var num = 1; num <= 10; num++) {
-//   console.log(num);
+// for(var i=1;i<=10;i++)
+// {
+//   console.log(i);
 // }
-
 //? Key Point:
 // The initialization, condition, and iteration expressions are optional. You can omit any or all of them, but you must include the semicolons.
 //* The code for (;;) {} represents an infinite loop in JavaScript. This construct is commonly used when you want a loop to run indefinitely or until a break statement is encountered within the loop. It's equivalent to while (true) {}.
 
 //* use case: Game Development:
+
 //? In game development, an infinite loop can be used to continuously update and render game frames until a specific condition (e.g., game over) is met.
+
 
 // for (;;) {
 //   // Update game logic and render frames
@@ -310,24 +303,20 @@ if (num === 0) {
 //! practice :
 //! Calculate the sum of numbers from 1 to 10 using a for loop 🧑‍💻
 
-// var sum = 0;
-// debugger;
-// for (var num = 1; num <= 10; num++) {
-//   var sum = sum + num;
+// let sum=0
+// for(let i=1;i<=10;i++)
+// {
+//   sum=sum+i; 
 // }
 // console.log(sum);
 
-//! Generating a Times Table:🧑‍💻
+//! Generating a Times Table:
 //! Example 3: Generating a times table of 5 with a for loop.
-// var num = 1;
-// while (num <= 10) {
-//   console.log("5 * " + num + " = " + 5 * num);
-//   //   console.log(`5 * ${num} = ${5 * num}`);
-//   num++;
-// }
-
-// for (var num = 1; num <= 10; num++) {
-//   console.log("5 * " + num + " = " + 5 * num);
+// num=0;
+// for(let i=1;i<=10;i++)
+// {
+//   num=5*i;
+//   console.log("5 * "+i+" = "+num);
 // }
 
 //! Homework ➡️ JavaScript program to print table for given number (8,9,12,15) using for Loop?
@@ -338,13 +327,20 @@ if (num === 0) {
 //? If a year is divisible by 400,
 // then it is a leap year. Otherwise, it is not a leap year.
 
-// var year = 2020;
+// var year=2023;
+// if(year%4==0 && year%100!=0 || year%400==0)
+// {
+//   console.log("year is leap");
 
-// if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-//   console.log(year, "it's a leap year");
-// } else {
-//   console.log(year, "it's not a leap year");
 // }
+// else
+// {
+//   console.log("Year is  not a leap year")
+// }
+
+
+
+
 
 //! 2: Drawing Patterns with Asterisks: 🧑‍💻
 
@@ -356,10 +352,14 @@ if (num === 0) {
 //*       4    *    *    *    *    -
 //*       5    *    *    *    *    *
 
-// for (var i = 1; i <= 5; i++) {
-//   var pattern = "";
-//   for (var j = 1; j <= i; j++) {
-//     pattern = pattern + " *";
-//   }
-//   console.log(pattern);
-// }
+
+
+for(var i=1;i<=5;i++)
+{
+  var pattern="";
+  for(var j=1;j<=i;j++)
+  {
+    pattern=pattern +" * ";
+  }
+  console.log(pattern);
+}

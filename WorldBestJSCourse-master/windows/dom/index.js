@@ -10,6 +10,8 @@
 
 //* Here is a types of nodes in js:
 
+
+
 //? Element node:  An HTML tag, the tree building blocks.
 
 //? Text node:  In the DOM tree, text content, including new lines, spaces, and tabs, is treated as text nodes.
@@ -24,9 +26,13 @@
 
 //? Document type node: A document type node, such as <! DOCTYPE html>.
 
+
+
 //* ==============================
 //* DOM Properties and Methods
 //* ==============================
+
+
 //! DOM Properties:
 // document
 // getElementById(id)
@@ -146,9 +152,11 @@
 //* =============================
 
 //? Iteration:
+
 //? forEach (Array.from): Iterate through NodeList or convert to an array for more flexible manipulation.
 
 // Very important
-//* When you use the browser's developer tools console to select an element and change its text content using JavaScript, you are directly manipulating the DOM object in memory. Since the DOM is a live representation of the document, any changes you make to the DOM objects are immediately reflected in the rendered web page.
 
-//* However, these changes are typically temporary and exist only in the current session. When you refresh the page or navigate away, the browser reloads the original HTML document from the server, and the DOM is reconstructed during the parsing process. Any modifications made to the DOM objects during the previous session are lost, and the page reverts to its original state.
+//*! When you use the browser's developer tools console to select an element and change its text content using JavaScript, you are directly manipulating the DOM object in memory. Since the DOM is a live representation of the document, any changes you make to the DOM objects are immediately reflected in the rendered web page.............
+
+//* However, these changes are typically temporary and exist only in the current session. When you refresh the page or navigate away, the browser reloads the original HTML document from the server, and the DOM is reconstructed during the parsing process.// Any modifications made to the DOM objects during the previous session are lost, and the page reverts to its original state.

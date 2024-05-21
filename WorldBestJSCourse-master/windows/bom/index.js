@@ -5,10 +5,13 @@
 // ?window properties
 
 //? window.console:
+
 // Represents the browser's debugging console.
+
 // Allows logging messages using methods like log(), warn(), and error().
 
 //? window.innerWidth / window.innerHeight:
+
 // Provides the width and height of the browser's content area (excluding toolbars and scrollbars).
 
 //? window.scrollX / window.scrollY:
@@ -18,17 +21,22 @@
 // Provides the width and height of the whole browser window (including toolbars and borders).
 
 //? window.localStorage:
+
 // Provides a way to store key-value pairs persistently on the user's device.
 // Allows storing data beyond the lifetime of a single page session.
 
 //* Functions alert/confirm/prompt are also a part of BOM:
+
 // They are directly not related to the document, but represent pure browser methods of communicating with the user.
 
 //? window Object:
+
 //? Represents the global window containing the BOM.
+
 // Example: window.location, window.innerWidth, window.innerHeight.
 
 //? navigator Object:
+
 // Provides information about the browser.
 // Example: navigator.userAgent, navigator.language.
 
@@ -50,10 +58,12 @@
 //? document Object:
 // Represents the DOM of the currently displayed document.
 
+
 //* navigator Object:
 //? The JavaScript navigator object is used for browser detection. It can be used to get browser information such as appName, appCodeName, userAgent etc.
 
 //? navigator.userAgent (Property):
+
 // Returns the user agent string of the browser.
 // Example: console.log(navigator.userAgent).
 

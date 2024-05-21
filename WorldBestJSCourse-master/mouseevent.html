@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .heading-1
+        {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Hello</h1>
+    <button class="myBtn">Click me</button>
+
+
+    <script>
+
+    //Power of adding classlist it allows us to aadd new class to html element directly from java script 
+
+     let refOfHeading= document.querySelector('.heading');
+     let btn= document.querySelector('.myBtn');
+
+     const handleEvent= function ()
+     {
+     refOfHeading.classList.add("heading-1");
+     refOfHeading.textContent="bye";
+     }
+
+    //  btn.addEventListener('click',()=>{handleEvent()});
+    btn.addEventListener('click',handleEvent);
+
+    </script>
+</body>
+</html>

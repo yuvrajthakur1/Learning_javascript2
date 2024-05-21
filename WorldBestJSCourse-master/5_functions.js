@@ -40,7 +40,7 @@
 //? This step defines the function and specifies what code should be executed when the function is called.
 
 // function greet() {
-//   console.log("Hello Guys, Welcome to Thapa Technical JS Course ");
+  // console.log("Hello Guys, Welcome to Javascript journey ");
 // }
 
 //* =================================================
@@ -90,9 +90,10 @@
 
 //! Practice Time
 //? Let's say we want to greet students with one same line
-//! Write a JavaScript program that defines a function called greet to welcome individuals to the Thapa Technical JS Course. The function should take a name parameter and output the message "Hello [name], Welcome to Thapa Technical JS Course". Call the function twice, once with the argument "vinod" and once with the argument "ram".
+//! Write a JavaScript program that defines a function called greet to welcome individuals to the JS Course. The function should take a name parameter and output the message "Hello [name], Welcome to Thapa Technical JS Course". Call the function twice, once with the argument "vinod" and once with the argument "ram".
+
 // function greet(name) {
-//   console.log("Hello " + name + ", Welcome to Thapa Technical JS Course");
+//   console.log("Hello " + name + ", Welcome to Javascript Journey");
 // }
 
 // greet("ram");
@@ -112,10 +113,11 @@
 //? A function expression is a way to define a function as part of an expression. It can be either named or anonymous. If it's named, it becomes a named function expression.
 
 // var result = function sum(a, b) {
-//   console.log(a + b);
+//   return a + b;
 // };
 
-// result(10, 15);
+// const r1=result(10,20);
+// console.log(r1)
 
 //* ==============================
 //*  Anonymous Function
@@ -156,6 +158,7 @@
 //* ==============================
 //* IIFE - immediately invoked function expression
 //* =============================
+
 //? An IIFE, or Immediately Invoked Function Expression, is a JavaScript function that is defined and executed immediately after its creation. It is a way to create a self-contained block of code that doesn't interfere with the surrounding code and executes immediately
 
 // Syntax
@@ -212,37 +215,42 @@
 // console.log(calculator(8, 4, "-")); // Output: 4
 // console.log(calculator(10, 0, "/")); // Output: 5
 
-//! Reverse a String:
+//! Reverse a String:-
+
 //! Write a function to reverse a given string without using built-in reverse methods.
 
-const isReverse = (str) => {
-  let reverse = "";
-  for (let char = str.length - 1; char >= 0; char--) {
-    reverse = reverse + str[char];
-  }
-  return reverse;
-};
+// const isReverse = (str) => {
+//   let reverse = "";
+//   for (let char = str.length - 1; char >= 0; char--) {
+//     reverse = reverse + str[char];
+//   }
+//   return reverse;
+// };
 
-console.log(isReverse("vinod thapa"));
+// console.log(isReverse("vinod thapa"));
 
 //! Palindrome Check:
 //! Create a function to determine if a given string is a palindrome (reads the same backward as forward).
 
 // // isi     isi
-// radar
-// level
-const isPalindrome = (str) => {
-  let reverse = "";
-  for (let char = str.length - 1; char >= 0; char--) {
-    reverse = reverse + str[char];
-  }
-  //   if (str === reverse) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
+// const palindrome = (str)=>
+// {
+//   let reverse="";
 
-  return str === reverse ? true : false;
-};
+//   for(let char = str.length-1;char>=0;char--)
+//   {
+//     reverse= reverse + str[char];
+//   }
 
-console.log(isPalindrome("level"));
+//   if(str===reverse)
+//   {
+//     return true;
+//   }
+//   else
+//   {
+//     return false;
+//   }
+
+// } 
+
+// console.log(palindrome('levol'));

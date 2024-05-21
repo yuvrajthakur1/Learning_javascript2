@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyBoard Event</title>
+</head>
+<body>
+
+    <div>
+        <input type="text" id="myInput" placeholder="Enter anything you want"/>
+
+    <div class="output">
+        <p class="keyPressed">kp</p>
+        <p class="keyCode">kc</p>
+        <p class="charCode">cc</p>
+        <p class="eventType">et</p>
+    </div>
+    </div>
+    
+
+    <script>
+
+        const handlekeydownEvent=(event)=>
+        {
+            console.log(event);
+            // console.log(event.target);
+            //ye bategea ki konsa element jo hei target hei is event ka jo ki input element hei understood
+
+            // console.log("keypressed :",event.key);
+            // console.log("key code :",event.code);
+            // console.log("key type :",event.type);
+
+            // ab saare ke saare event object ki jagah important informatin molegi
+
+            // ese karke hum webpage pe bhi changes dikha dege
+
+            document.querySelector(".keyPressed").textContent=`key pressed is :${event.key}`;
+            document.querySelector(".keyCode").textContent=`key code is :${event.keyCode}`;
+            document.querySelector(".charCode").textContent=`char code is :${event.key.charCodeAt(0)}`;
+            //ye ascii character code dega humei
+            document.querySelector(".eventType").textContent=`Event type is is :${event.type}`;
+
+            // mission sucess full is tarah kaam ata hei (event object ) iski help se hum event ki idfferent different propertieds ko acess kar
+            // sakete hei event object mei event ki saari properties hoti hei
+        
+        }
+
+        // this event object complete information about the what kind of event is occured for the event that we are clling
+
+
+        // Get the input element by its id
+
+        let inputField= document.getElementById('myInput');
+        
+        inputField.addEventListener('keydown',
+        handlekeydownEvent)
+        // inputField.addEventListener('click',handlekeydownEvent)
+    
+    
+    </script>
+</body>
+</html>

@@ -26,31 +26,65 @@
       <div class="todoListsElem"></div>
     </div>
     <script>
-      let inputElem = document.getElementById("inputField");
-      let clickBtn = document.querySelector(".btn");
-      let todoElem = document.querySelector(".todoListsElem");
-      // let todoFirst = document.getElementById("todoFirst");
+      // ===================CRUD operations starts from here=========== //
+     let  inputElem= document.getElementById("inputField");
+     let clickBtn= document.querySelector(".btn");
+     let todoElem= document.querySelector(".todoListsElem");//it is a reference  where we want to  to put the node that we  will create
 
-      const addTodo = () => {
-        console.log(inputElem.value);
-        // todoFirst.textContent = inputElem.value;
-        let pElem = document.createElement("p");
-        pElem.textContent = inputElem.value;
-        console.log(pElem);
-        todoElem.append(pElem);
+    
+     //using function expression  
 
-        inputElem.value = "";
-      };
+     const addTodo=()=>
+     {
+      console.log(inputElem.value);
+      //click karne pe input jo user ne kia hei bo console pe dikhega
 
-      clickBtn.addEventListener("click", () => {
-        addTodo();
-      });
+      let pElem= document.createElement('p');
+      //ye node create ho rha hei jo humei append kkarna  hei html document  pe  
+      
+      // console.log(pElem);
 
-      todoElem.addEventListener("click", (event) => {
-        console.log(event.target);
-        let currentElem = event.target;
-        currentElem.remove();
-      });
+      pElem.textContent= inputElem.value;
+      //jo bhi input user dega  usko hum add kar rahe  hei jo element or node humn e create kia hei usme
+
+      todoElem.appendChild(pElem); 
+      //jo element humne create kia hei  aur usme jo text add kia hei  humne user in put ka usko hum html page pe append matlv add kar rahe  hhie 
+     
+
+      // har click pe ek  elemebt add hoga screen pe
+
+      inputElem.value="";
+      // ye node ko ek baar add karne ke baad inputfield se us text ko hata dega its a magic magic ooo
+
+
+
+      // AB humara task hei jo bhi todo screen pe add ho agar hum unmese kisi pe click karei to bo delete hojae aur humei ye pata chale ki humne kiskko delete kia hei 
+    //div ko hum click event de rahe hei
+
+      todoElem.addEventListener('click',(event)=>
+    {
+      //ye humare paas event object hota hi hai
+      console.log(event.target);
+      // ye humei milega todo console pe jisko hum click karege uka element aur text dono milega
+
+      let curElem= event.target; //click pe jo element mila usko curElem mei store kardia
+
+      curElem.remove();
+
+      // ab jo bhi element click hoga bo remove hojaega aur humare paas information bhi ayegi console pe ki humne kis todo ko click kia hei aur  wahi delete  bhin hoga
+
+      // iske baad hum kisi bhi todo pe click karege to humei console mei ye  pata chalega ki ki humne kis todo ko clickkia 
+      // ye power hei javascript ki
+    })
+
+
+      
+     }
+
+     clickBtn.addEventListener('click',()=>{
+      addTodo();
+     })
+
     </script>
   </body>
 </html>

@@ -3,12 +3,17 @@
 //* =========================================
 
 //* Math: The Math namespace object contains static properties and methods for mathematical constants and functions.
-//* Math works with the Number type. It doesn't work with BigInt.
+//* Math works with the Number type. 
+// It doesn't work with BigInt.
 
 //? 1: Constants:
+
 //* - Math.PI: Represents the mathematical constant Pi (π).
-// const piValue = Math.PI;
-// console.log(piValue);
+
+// const pivalue= Math.PI;
+// console.log(pivalue)
+
+
 
 //* =========================================
 //* 2. Basic Operations:
@@ -16,9 +21,11 @@
 
 //? Math.abs(): The Math.abs() static method returns the absolute value of a number.
 // or in simple, how far the number is from 0. It will be always positive
-
 // console.log(Math.abs(5));
 // console.log(Math.abs(-115));
+// console.log(Math.abs(-250));
+// console.log(Math.abs(-1.2))
+
 
 //? Math.round(x): Rounds a number to the nearest integer.
 // const roundedValue = Math.round(3.7);
@@ -33,12 +40,12 @@
 // console.log(floorValue);
 
 //? Math.trunc(x): Returns the integer part of x:
-// const truncValue = Math.trunc(3.7);
+// const truncValue = Math.trunc(3.1);
 // console.log(truncValue);
 
 //todo Math.trunc() and Math.sign() were added to JavaScript 2015 - ES6.
-// const truncValue = Math.trunc(-3.7);
-// const floorValue = Math.floor(-3.1);
+// const truncValue = Math.trunc(-3.7);//-3
+// const floorValue = Math.floor(-3.7);//-4
 // console.log(truncValue);
 // console.log(floorValue);
 
@@ -70,10 +77,16 @@
 // console.log(logResult);
 
 //* =========================================
-//* Interview Question
+//*          Interview Question
 //* =========================================
 
 //! Generate Random number
+
 //? Math.random(): Math.random() returns a random number between 0 (inclusive), and 1 (exclusive)
 
-console.log((Math.random() * 100).toFixed(3));
+for(let i=0;i<=100;i++)
+{
+console.log((Math.random()*100).toFixed(3));
+}
+
+//3 integer accuracy after decimal

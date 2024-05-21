@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Eent</title>
+</head>
+<body>
+    <input type="text"
+    id="myInput"
+    nmae="username"
+    placeholder="Type something"
+    autocomplete="off"/>
+
+    <div class="output">
+        <p class="Inputvalue">Input Value</p>
+        <p class="Inputname">Input name</p>
+        <p class="Inputtype">Input type</p>
+        <p class="Eventtype">Event type</p>
+    </div>
+
+
+    <script>
+        let handleInput= (event)=>{
+           
+         console.log(event);//same as event object of keyboardevent
+        
+         document.querySelector('.Inputvalue').textContent=`Input value is:${event.data}`;
+         document.querySelector('.Inputname').textContent=`Input name is:${event.name}`;
+         document.querySelector('.Inputtype').textContent=`Input type is:${event.inputType}`;
+         document.querySelector('.Eventtype').textContent=`event type is:${event.type}`;
+            
+        };
+
+        // ---------------------
+        let inputElem= document.querySelector("#myInput");
+
+        // agar koi user input field mei ki bhi letter type larta hei to ot  bo event  fire hojana chahiye
+        // inputElem.addEventListener('input',handleInput);
+
+
+
+        // ==============change event starts here===========//*css*/`
+
+        
+        inputElem.addEventListener('change',handleInput);
+
+        // when we came out of the input filed changes will be performed 
+    </script>
+</body>
+</html>

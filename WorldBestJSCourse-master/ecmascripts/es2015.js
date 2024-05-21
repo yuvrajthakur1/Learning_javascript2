@@ -8,15 +8,17 @@
 
 //? let Keyword:  The let keyword is used to declare variables with block scope. Variables declared with let are mutable, meaning their values can be reassigned.
 
-// var myFavWorldBestName = "vinod Bahadur Thapa";
-// myFavWorldBestName = "thapa technical";
+// var myFavWorldBestName = "Java Script Course";
+// myFavWorldBestName = "Journey of JS";
 // console.log(myFavWorldBestName);
 
-// let myFavWorldBestName = "vinod Bahadur Thapa";
-// myFavWorldBestName = "thapa technical";
+// let myFavWorldBestName = "Javascript Course";
+// myFavWorldBestName = "Journey of jS";
 // console.log(myFavWorldBestName);
 
 //? const Keyword: The const keyword is used to declare variables with block scope, but once a value is assigned to a const variable, it cannot be reassigned. const variables are immutable.
+
+//? But operations can be performed on COnst Variable
 
 // pi=3.142 * r * r
 
@@ -46,7 +48,7 @@
 // name = "technical";
 // console.log(name);
 
-//? ex2: with the help of let keyword
+//? ex3: with the help of let keyword
 // const name = "thapa";
 
 // if (true) {
@@ -57,7 +59,7 @@
 // name = "technical";
 // console.log(name);
 
-// var
+//! var
 // if (true) {
 //   var name = "vinod";
 //   console.log(name);
@@ -65,13 +67,18 @@
 // name = "technical";
 // console.log(name);
 
-// let
+//! let
 // if (true) {
 //   let name = "vinod";
 //   console.log(name);
 // }
 // // name = "technical";
 // console.log(name);
+// ! Let block scoped hota hei let se declare kiye gaye variable block mei hi use kar sakte hei bahr use karege to error ayega 
+// ! jabki var ke variable kahi bhi use kar skte hei agar humne koi variable kisi blovk mei declare kia h aur assignment bhi kia hei
+//! to hum use dusre kisi block mei ya globally bhi use kar skate haie. 
+
+
 
 //* ==========================================
 //* TEMPLATE STRINGS - EcmaScript 2015
@@ -111,14 +118,15 @@
 // let num = 5;
 // console.log(`5 * ${num} = ${5 * num}`);
 
-//? Advantages:
-//? Readability: Template strings make the code more readable, especially for complex string constructions.
+//! Advantages:
 
-//? Conciseness: They eliminate the need for explicit string concatenation and reduce the use of escape characters.
+//* Readability: Template strings make the code more readable, especially for complex string constructions.
 
-//? Expression Flexibility: Any JavaScript expression can be embedded within ${}.
+//* Conciseness: They eliminate the need for explicit string concatenation and reduce the use of escape characters.
 
-//? Multi-line Support: Creating multi-line strings is more straightforward.
+//* Expression Flexibility: Any JavaScript expression can be embedded within ${}.
+
+//* Multi-line Support: Creating multi-line strings is more straightforward.
 
 //* ==========================================
 //* DEFAULT Parameters
@@ -129,6 +137,8 @@
 //? Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed.
 
 //! Write a function to find sum of two numbers? What if during function call user only passed one argument?
+
+// ?Ye 10 aur 20 default hei uss case mei jab koi bhi argument na diyajaegga uss case mei apply hoga
 
 // function sum(a = 20, myCurClass = 10) {
 //   return a + b;
@@ -169,8 +179,24 @@
 // console.log(square(5));
 
 // //? 🚀 3: If there are no parameters, use an empty set of parentheses ().
-// const greet = () => console.log("Plz LIKE SHARE & SUBSCRIBE!");
+// const greet = () => console.log("Hello")
 // greet();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //! ==========================================
 //!  Part 2 of Modern JavaScript
@@ -199,6 +225,7 @@
 // Destructuring is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. That is, we can extract data from arrays and objects and assign them to variables.
 
 //? 1: Extracting specific elements:
+
 const numbers = [10, 20, 30];
 // const first = numbers[0]; // Traditional way
 // const [first, second, third] = numbers;
@@ -238,6 +265,7 @@ const user = { name: "Vinod", age: 30 };
 //* ==========================================
 //*  Spread Operator - Modern JavaScript
 //* =========================================
+
 // JavaScript ES6 (ECMAScript 6) introduced the spread operator. The syntax is three dots(...) followed by the array (or iterable*).
 
 //? 1. Copying an array
@@ -258,6 +286,8 @@ const user = { name: "Vinod", age: 30 };
 // console.log(fruits);
 
 //! One more useCases
+
+
 //? In JavaScript, when you spread a string using the spread syntax (...), it converts the string into an array of its individual characters.
 
 //? Traditional way
